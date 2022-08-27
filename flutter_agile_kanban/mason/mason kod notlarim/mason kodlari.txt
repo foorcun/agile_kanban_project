@@ -1,0 +1,53 @@
+https://www.youtube.com/watch?v=SnrHoN632NU&ab_channel=Flutterly
+
+-mason folder yarat
+
+mkdir mason ( ya da ne isim verirsen)
+
+cd mason
+
+mason init 
+
+mason remove hello
+
+mason new page_widget // mason new  komutu yeni brick yaratiyor
+2.mason.yaml path ekle
+3.mason get
+
+ mason new page_widget -o ./brick
+
+mason get // bu komut bricklerin icinde girdigimiz dynamic variable ler icin .mason foldurunda ilgili .json i olusturuyor. her yeni brick
+ekledigmizide; mason.yaml path eklemeli ve bu kodu tekrar calistirmaliyz(boylece .manson daki json yenilenir)
+
+mason ls // elimizdeki brick leri print ediyor
+
+
+mason cache clear // bu kod .mason icindeki .json file siliyor
+
+mason make weather // brick ile code generation yapiyor weather > __brick__ > folderi icindeki yapiyi olusturup cikartiyor
+
+
+mason make jsonolsun -c .\jsonolsun\config.json
+
+mason make jsonolsun -c .\jsonolsun\config.json 
+
+
+mason install --source path brickName // bu kod brick leri path a ekleyip her yerde kullanilabilir yapiyor
+
+
+
+flutter visual code
+
+mkdir mason
+
+cd mason // dikkat et macos icine girme
+
+mason init
+
+mason cache clear
+
+mason new home_page_brick -o ./brick/
+2. yaml path e ekle
+3. mason get
+
+mason make home_page_brick -o ..\lib\

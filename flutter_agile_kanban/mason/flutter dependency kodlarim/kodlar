@@ -1,0 +1,3 @@
+flutter pub add get:4.6.1 // bu get: 4.6.1 seklinde ekliyr ama ben get: ^4.6.1 kullaniyorum. ^ eklemeyi unutma
+
+flutter pub add http
