@@ -9,4 +9,10 @@ public interface IProjectDal {
     List<MyProject> getAllProject() throws ExecutionException, InterruptedException;
 
     String createMyProject(MyProject myProject) throws ExecutionException, InterruptedException;
+
+    MyProject getById(String documentId) throws ExecutionException, InterruptedException;
+
+    String updateMyProject(MyProject myProject) throws ExecutionException, InterruptedException;
+
+    String deleteMyProject(String documentId);
 }

@@ -21,10 +21,26 @@ public class ProjectController {
         return projectManager.getAllProject();
     }
 
+    @GetMapping("/get")
+    public MyProject getById(@RequestParam String documentId)throws InterruptedException, ExecutionException{
+        return projectManager.getById(documentId);
+    }
+
     @PostMapping("/createProject")
     public String createMyProject(@RequestBody MyProject myProject)throws InterruptedException, ExecutionException{
         return projectManager.createMyProject(myProject);
     }
+
+    @PutMapping("/update")
+    public String updateMyProject(@RequestBody MyProject myProject) throws ExecutionException, InterruptedException {
+        return projectManager.updateMyProject(myProject);
+    }
+
+    @PutMapping("/delete")
+    public String deleteMyProject(@RequestParam String documentId){
+        return projectManager.deleteMyProject(documentId);
+    }
+
     @GetMapping("/test")
     public ResponseEntity<String> testGetEndpoint() {
         return ResponseEntity.ok("kanban Test Get Endpoint is Working");
